@@ -65,8 +65,8 @@ export class FireTVCard extends LitElement {
               : ''}
           </div>
           <div class="row">
-            ${this._renderButton('back', 'mdi:arrow-left', 'Back')}
-            ${this._renderButton('info', 'mdi:asterisk', 'Info')} ${this._renderButton('home', 'mdi:home', 'Home')}
+            ${this._renderButton('BACK', 'mdi:arrow-left', 'Back')}
+            ${this._renderButton('MENU', 'mdi:asterisk', 'Info')} ${this._renderButton('HOME', 'mdi:home', 'Home')}
           </div>
 
           <div class="row">
