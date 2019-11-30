@@ -70,23 +70,22 @@ export class FireTVCard extends LitElement {
           </div>
 
           <div class="row">
-            ${this._renderImage(0)} ${this._renderButton('up', 'mdi:chevron-up', 'Up')} ${this._renderImage(1)}
+            ${this._renderImage(0)} ${this._renderButton('UP', 'mdi:chevron-up', 'Up')} ${this._renderImage(1)}
           </div>
 
           <div class="row">
-            ${this._renderButton('left', 'mdi:chevron-left', 'Left')}
-            ${this._renderButton('select', 'mdi:checkbox-blank-circle', 'Select')}
-            ${this._renderButton('right', 'mdi:chevron-right', 'Right')}
+            ${this._renderButton('LEFT', 'mdi:chevron-left', 'Left')}
+            ${this._renderButton('CENTER', 'mdi:checkbox-blank-circle', 'Select')}
+            ${this._renderButton('RIGHT', 'mdi:chevron-right', 'Right')}
           </div>
 
           <div class="row">
-            ${this._renderImage(2)} ${this._renderButton('down', 'mdi:chevron-down', 'Down')} ${this._renderImage(3)}
+            ${this._renderImage(2)} ${this._renderButton('DOWN', 'mdi:chevron-down', 'Down')} ${this._renderImage(3)}
           </div>
 
           <div class="row">
-            ${this._renderButton('reverse', 'mdi:rewind', 'Rewind')}
-            ${this._renderButton('play', 'mdi:play-pause', 'Play/Pause')}
-            ${this._renderButton('forward', 'mdi:fast-forward', 'Fast-Forward')}
+            ${this._renderButton('REWIND', 'mdi:rewind', 'Rewind')}
+            ${this._renderButton('FAST_FORWARD', 'mdi:fast-forward', 'Fast-Forward')}
           </div>
 
           ${this._config.tv ||
