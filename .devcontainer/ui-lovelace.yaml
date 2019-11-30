@@ -1,7 +1,7 @@
 resources:
-  - url: http://127.0.0.1:5000/roku-card.js
+  - url: http://127.0.0.1:5000/firetv-card.js
     type: module
 views:
   - cards:
-      - type: custom:roku-card
-        entity: media_player.office_roku
+      - type: custom:firetv-card
+        entity: media_player.office_firetv

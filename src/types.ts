@@ -1,6 +1,6 @@
 import { ActionConfig } from 'custom-card-helpers';
 
-export interface RokuCardConfig {
+export interface FireTVCardConfig {
   type: string;
   entity: string;
   remote?: string;

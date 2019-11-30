@@ -5,7 +5,7 @@ import serve from 'rollup-plugin-serve';
 import { terser } from 'rollup-plugin-terser';
 
 export default {
-  input: ['src/roku-card.ts'],
+  input: ['src/firetv-card.ts'],
   output: {
     dir: './dist',
     format: 'es',

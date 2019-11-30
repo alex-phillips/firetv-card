@@ -14,7 +14,7 @@ jobs:
       # Build
       - name: Build the file
         run: |
-          cd /home/runner/work/roku-card/roku-card
+          cd /home/runner/work/firetv-card/firetv-card
           npm install
           npm run build
 
@@ -24,7 +24,7 @@ jobs:
 
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: /home/runner/work/roku-card/roku-card/dist/roku-card.js
-          asset_name: roku-card.js
+          file: /home/runner/work/firetv-card/firetv-card/dist/firetv-card.js
+          asset_name: firetv-card.js
           tag: ${{ github.ref }}
           overwrite: true

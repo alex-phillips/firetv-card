@@ -1,32 +1,32 @@
 import { html, LitElement, TemplateResult, customElement, property, CSSResult, css } from 'lit-element';
 import { HomeAssistant, applyThemesOnElement, hasAction, handleAction } from 'custom-card-helpers';
 
-import { RokuCardConfig } from './types';
+import { FireTVCardConfig } from './types';
 import { actionHandler } from './action-handler-directive';
 import { CARD_VERSION } from './const';
 
 const defaultRemoteAction = {
   action: 'call-service',
-  service: 'remote.send_command',
+  service: 'androidtv.adb_command',
 };
 
 /* eslint no-console: 0 */
 console.info(
-  `%c  ROKU-CARD     \n%c  Version ${CARD_VERSION} `,
+  `%c  FIRETV-CARD     \n%c  Version ${CARD_VERSION} `,
   'color: orange; font-weight: bold; background: black',
   'color: white; font-weight: bold; background: dimgray',
 );
 
-@customElement('roku-card')
-export class RokuCard extends LitElement {
+@customElement('firetv-card')
+export class FireTVCard extends LitElement {
   @property() public hass?: HomeAssistant;
-  @property() private _config?: RokuCardConfig;
+  @property() private _config?: FireTVCardConfig;
 
   public getCardSize(): number {
     return 7;
   }
 
-  public setConfig(config: RokuCardConfig): void {
+  public setConfig(config: FireTVCardConfig): void {
     if (!config.entity && !config.remote) {
       console.log("Invalid configuration. If no entity provided, you'll need to provide a remote entity");
       return;

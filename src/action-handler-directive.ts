@@ -164,15 +164,15 @@ class ActionHandler extends HTMLElement implements ActionHandler {
   }
 }
 
-customElements.define('action-handler-roku', ActionHandler);
+customElements.define('action-handler-firetv', ActionHandler);
 
 const getActionHandler = (): ActionHandler => {
   const body = document.body;
-  if (body.querySelector('action-handler-roku')) {
-    return body.querySelector('action-handler-roku') as ActionHandler;
+  if (body.querySelector('action-handler-firetv')) {
+    return body.querySelector('action-handler-firetv') as ActionHandler;
   }
 
-  const actionhandler = document.createElement('action-handler-roku');
+  const actionhandler = document.createElement('action-handler-firetv');
   body.appendChild(actionhandler);
 
   return actionhandler as ActionHandler;
