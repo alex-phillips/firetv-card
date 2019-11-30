@@ -201,7 +201,7 @@ export class FireTVCard extends LitElement {
       const button = ev.currentTarget.button;
       const config = this._config[button] || ev.currentTarget.config;
       const app = ev.currentTarget.app;
-      const remote = this._config.remote ? this._config.remote : 'remote.' + this._config.entity.split('.')[1];
+      const remote = this._config.remote ? this._config.remote : 'media_player.' + this._config.entity.split('.')[1];
 
       handleAction(
         this,
