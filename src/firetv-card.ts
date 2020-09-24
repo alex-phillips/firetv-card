@@ -65,8 +65,8 @@ export class FireTVCard extends LitElement {
               : ''}
           </div>
           <div class="row">
-            ${this._renderButton('BACK', 'mdi:arrow-left', 'Back')}
-            ${this._renderButton('MENU', 'mdi:asterisk', 'Info')} ${this._renderButton('HOME', 'mdi:home', 'Home')}
+            ${this._renderButton('back', 'mdi:arrow-left', 'Back')}
+            ${this._renderButton('menu', 'mdi:asterisk', 'Menu')} ${this._renderButton('HOME', 'mdi:home', 'Home')}
           </div>
 
           <div class="row">
@@ -74,18 +74,18 @@ export class FireTVCard extends LitElement {
           </div>
 
           <div class="row">
-            ${this._renderButton('LEFT', 'mdi:chevron-left', 'Left')}
-            ${this._renderButton('CENTER', 'mdi:checkbox-blank-circle', 'Select')}
-            ${this._renderButton('RIGHT', 'mdi:chevron-right', 'Right')}
+            ${this._renderButton('left', 'mdi:chevron-left', 'Left')}
+            ${this._renderButton('center', 'mdi:checkbox-blank-circle', 'Select')}
+            ${this._renderButton('right', 'mdi:chevron-right', 'Right')}
           </div>
 
           <div class="row">
-            ${this._renderImage(2)} ${this._renderButton('DOWN', 'mdi:chevron-down', 'Down')} ${this._renderImage(3)}
+            ${this._renderImage(2)} ${this._renderButton('down', 'mdi:chevron-down', 'Down')} ${this._renderImage(3)}
           </div>
 
           <div class="row">
-            ${this._renderButton('REWIND', 'mdi:rewind', 'Rewind')}
-            ${this._renderButton('FAST_FORWARD', 'mdi:fast-forward', 'Fast-Forward')}
+            ${this._renderButton('rewind', 'mdi:rewind', 'Rewind')}
+            ${this._renderButton('fast_forward', 'mdi:fast-forward', 'Fast-Forward')}
           </div>
 
           ${this._config.tv ||
@@ -221,7 +221,7 @@ export class FireTVCard extends LitElement {
           : {
               tap_action: {
                 service_data: {
-                  command: button,
+                  command: button.toUpperCase(),
                   entity_id: remote,
                 },
                 ...defaultRemoteAction,

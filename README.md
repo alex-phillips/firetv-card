@@ -17,9 +17,9 @@
 
 Hey dude! Help me out for a couple of :beers: or a :coffee:!
 
-[![coffee](https://www.buymeacoffee.com/assets/img/custom_images/black_img.png)](https://www.buymeacoffee.com/zJtVxUAgH)
+[![coffee](https://cdn.buymeacoffee.com/buttons/default-black.png)](https://www.buymeacoffee.com/SjJ75Ec)
 
-This card is for [Lovelace](https://www.home-assistant.io/lovelace) on [Home Assistant](https://www.home-assistant.io/) that display a [Roku](https://www.roku.com/) remote.
+This card is for [Lovelace](https://www.home-assistant.io/lovelace) on [Home Assistant](https://www.home-assistant.io/) that display a [FireTV](https://www.amazon.com/Amazon-Fire-TV-Family/b?ie=UTF8&node=8521791011) remote.
 
 ![example](example.png)
 
@@ -29,36 +29,34 @@ Use [HACS](https://hacs.xyz) or follow this [guide](https://github.com/thomaslov
 
 ```yaml
 resources:
-    url: /local/roku-card.js
+    url: /local/firetv-card.js
     type: module
 ```
 
 ## Options
 
-| Name        | Type      | Requirement  | Description                                                                |
-| ----------- | --------- | ------------ | -------------------------------------------------------------------------- |
-| type        | `string`  | **Required** | `custom:roku-card`                                                         |
-| entity      | `string`  | **Required** | `media_player` entity of Roku device                                       |
-| remote      | `string`  | **Optional** | `remote` entity of Roku device. Default assumed named like `entity`        |
-| name        | `string`  | **Optional** | Card name                                                                  |
-| theme       | `string`  | **Optional** | Card theme                                                                 |
-| tv          | `boolean` | **Optional** | If `true` shows volume and power buttons. Default `false`                  |
-| power       | `map`     | **Optional** | Button configuration for power [See button options](#button-options)       |
-| volume_up   | `map`     | **Optional** | Button configuration for volume_up [See button options](#button-options)   |
-| volume_down | `map`     | **Optional** | Button configuration for volume_down [See button options](#button-options) |
-| volume_mute | `map`     | **Optional** | Button configuration for volume_mute [See button options](#button-options) |
-| up          | `map`     | **Optional** | Button configuration for up [See button options](#button-options)          |
-| down        | `map`     | **Optional** | Button configuration for down [See button options](#button-options)        |
-| left        | `map`     | **Optional** | Button configuration for left [See button options](#button-options)        |
-| right       | `map`     | **Optional** | Button configuration for right [See button options](#button-options)       |
-| home        | `map`     | **Optional** | Button configuration for home [See button options](#button-options)        |
-| info        | `map`     | **Optional** | Button configuration for info [See button options](#button-options)        |
-| back        | `map`     | **Optional** | Button configuration for back [See button options](#button-options)        |
-| select      | `map`     | **Optional** | Button configuration for select [See button options](#button-options)      |
-| reverse     | `map`     | **Optional** | Button configuration for reverse [See button options](#button-options)     |
-| play        | `map`     | **Optional** | Button configuration for play [See button options](#button-options)        |
-| forward     | `map`     | **Optional** | Button configuration for forward [See button options](#button-options)     |
-| apps        | `map`     | **Optional** | List of app shortcuts [See app options](#app-options)                      |
+| Name         | Type      | Requirement  | Description                                                                |
+| -----------  | --------- | ------------ | -------------------------------------------------------------------------- |
+| type         | `string`  | **Required** | `custom:firetv-card`                                                         |
+| entity       | `string`  | **Required** | `media_player` entity of FireTV device                                       |
+| name         | `string`  | **Optional** | Card name                                                                  |
+| theme        | `string`  | **Optional** | Card theme                                                                 |
+| tv           | `boolean` | **Optional** | If `true` shows volume and power buttons. Default `false`                  |
+| power        | `map`     | **Optional** | Button configuration for power [See button options](#button-options)       |
+| volume_up    | `map`     | **Optional** | Button configuration for volume_up [See button options](#button-options)   |
+| volume_down  | `map`     | **Optional** | Button configuration for volume_down [See button options](#button-options) |
+| volume_mute  | `map`     | **Optional** | Button configuration for volume_mute [See button options](#button-options) |
+| up           | `map`     | **Optional** | Button configuration for up [See button options](#button-options)          |
+| down         | `map`     | **Optional** | Button configuration for down [See button options](#button-options)        |
+| left         | `map`     | **Optional** | Button configuration for left [See button options](#button-options)        |
+| right        | `map`     | **Optional** | Button configuration for right [See button options](#button-options)       |
+| home         | `map`     | **Optional** | Button configuration for home [See button options](#button-options)        |
+| menu         | `map`     | **Optional** | Button configuration for menu [See button options](#button-options)        |
+| back         | `map`     | **Optional** | Button configuration for back [See button options](#button-options)        |
+| center       | `map`     | **Optional** | Button configuration for center [See button options](#button-options)      |
+| rewind       | `map`     | **Optional** | Button configuration for rewind [See button options](#button-options)     |
+| fast_forward | `map`     | **Optional** | Button configuration for fast_forward [See button options](#button-options)     |
+| apps         | `map`     | **Optional** | List of app shortcuts [See app options](#app-options)                      |
 
 ## app Options
 
@@ -95,8 +93,8 @@ resources:
 ## Usage
 
 ```yaml
-type: "custom:roku-card"
-entity: media_player.basement_roku
+type: "custom:firetv-card"
+entity: media_player.basement_firetv
 tv: true
 apps:
   - image: /local/netflix.webp
